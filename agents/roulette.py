@@ -3,7 +3,7 @@ import os
 from pydantic_ai import Agent, RunContext
 
 
-with open("./.secrets/google_api_key.txt", "r") as f:
+with open("./.secrets/gemini.key", "r") as f:
     google_api_key = f.read().strip()
     os.environ["GOOGLE_API_KEY"] = google_api_key
 
