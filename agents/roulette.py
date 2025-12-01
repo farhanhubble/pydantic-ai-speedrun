@@ -31,7 +31,6 @@ if __name__ == "__main__":
     parser.add_argument(
         "bet_text",
         type=str,
-        required=True,
         help="A natural language description of the bet",
     )
     args = parser.parse_args()
