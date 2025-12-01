@@ -13,12 +13,14 @@ agent = Agent(
 
 
 async def main():
-    result = await agent.run("Tell me something about the capital of Italy in roughly 140 words?")
+    result = await agent.run("Tell me something interesting about the capital of Italy in roughly 140 words?")
     print('\n', result.output)
 
 async def progress():
-    print('.', end='', flush=True)
-    await asyncio.sleep(.1)
+    print('Thinking ', end='', flush=True)
+    while True:
+        print('.', end='', flush=True)
+        await asyncio.sleep(.1)
 
 
 async def run_with_progress():
